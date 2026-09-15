@@ -7,6 +7,8 @@ Stack:
 - Database: Supabase PostgreSQL
 - Deploy: Vercel
 
+Production: https://queue-angular-supabase-vercel.vercel.app/
+
 ## Architecture
 
 Browser
@@ -114,7 +116,7 @@ npm run build
 Output:
 
 ```text
-dist/it05-queue
+dist/it05-queue/browser
 ```
 
 The Express API is:

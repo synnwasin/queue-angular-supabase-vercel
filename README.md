@@ -1,4 +1,4 @@
-# IT 05 Queue Ticket System
+# Queue Ticket System
 
 Stack:
 

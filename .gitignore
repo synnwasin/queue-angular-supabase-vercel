@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.angular/
+.env
+.env.local
+.vercel/
+*.log
+
+.vercel
+.env*

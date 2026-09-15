@@ -1,0 +1,70 @@
+<main class="app-shell">
+  @if (page === 'home') {
+    <header class="topbar">IT 05-01</header>
+  }
+
+  @if (page === 'ticket') {
+    <header class="topbar">IT 05-02</header>
+  }
+
+  @if (page === 'reset') {
+    <header class="topbar">IT 05-03</header>
+  }
+
+  <!-- IT 05-1 -->
+  @if (page === 'home') {
+    <section class="page home-page">
+      <button
+        class="btn primary big"
+        [disabled]="loading"
+        (click)="takeTicket()">
+        {{ loading ? 'กำลังรับบัตรคิว...' : 'รับบัตรคิว' }}
+      </button>
+
+      <div class="home-actions">
+        <button
+          class="btn secondary"
+          [disabled]="loading"
+          (click)="showResetPage()">
+          ล้างคิว
+        </button>
+      </div>
+    </section>
+  }
+
+  <!-- IT 05-2 -->
+  @if (page === 'ticket') {
+    <section class="page ticket-page">
+      <div class="label queue-label">หมายเลขคิว</div>
+      <div class="ticket">{{ ticket }}</div>
+      <div class="date">{{ ticketDate }}</div>
+
+      <button class="btn primary" (click)="backHome()">
+        กลับไปหน้ารับบัตรคิว
+      </button>
+    </section>
+  }
+
+  <!-- IT 05-3 -->
+  @if (page === 'reset') {
+    <section class="page reset-page">
+      <button
+        class="btn primary small"
+        [disabled]="loading"
+        (click)="resetQueue()">
+        {{ loading ? 'กำลังล้างคิว...' : 'ล้างคิว' }}
+      </button>
+
+      <div class="label">หมายเลขคิวปัจจุบัน</div>
+      <div class="ticket">{{ ticket }}</div>
+
+      <button class="btn primary bottom" (click)="backHome()">
+        กลับไปหน้ารับบัตรคิว
+      </button>
+    </section>
+  }
+
+  @if (error) {
+    <div class="error">{{ error }}</div>
+  }
+</main>

@@ -1,0 +1,244 @@
+:host {
+  display: block;
+  min-height: 100dvh;
+}
+
+.app-shell {
+  width: min(100%, 720px);
+  min-height: 100dvh;
+  margin: 0 auto;
+  background: #fff;
+  position: relative;
+}
+
+.topbar {
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  min-height: 38px;
+  padding: 8px 16px;
+  background: #08ad52;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #063b20;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+.page {
+  min-height: calc(100dvh - 38px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(28px, 6vh, 64px) clamp(20px, 6vw, 48px) clamp(32px, 8vh, 72px);
+  text-align: center;
+}
+
+.page h1 {
+  width: min(100%, 480px);
+  margin: 0;
+  padding: clamp(22px, 4vw, 32px) clamp(24px, 7vw, 56px);
+  background: #4776c8;
+  color: #fff;
+  border-radius: 17px;
+  font-size: clamp(30px, 7vw, 48px);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.home-page {
+  padding-top: clamp(12px, 4vh, 28px);
+}
+
+.home-page > .btn.big {
+  width: min(88vw, 480px);
+  min-height: clamp(128px, 30vw, 240px);
+  padding: clamp(24px, 5vw, 44px) clamp(20px, 6vw, 48px);
+  border-radius: 18px;
+  box-shadow: 0 8px 18px rgb(35 73 135 / 22%);
+  font-size: clamp(30px, 10vw, 64px);
+  line-height: 1.2;
+}
+
+.home-actions {
+  margin-top: auto;
+  margin-bottom: clamp(24px, 8vh, 64px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+}
+
+.btn {
+  width: 100%;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  background: #4776c8;
+  min-width: 165px;
+  padding: 10px 18px;
+  font-size: 14px;
+}
+
+.btn:focus-visible {
+  outline: 3px solid #f2b134;
+  outline-offset: 3px;
+}
+
+.btn:disabled {
+  opacity: .6;
+  cursor: wait;
+}
+
+.btn.big {
+  min-width: 0;
+  padding: 18px 24px;
+  font-size: 24px;
+}
+
+.btn.secondary {
+  background: #aaa;
+  width: min(88vw, 480px);
+  min-height: 0;
+  min-width: 0;
+  padding: 12px 18px;
+  border-radius: 6px;
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.btn.small {
+  width: min(100%, 155px);
+  min-width: 0;
+}
+
+.label {
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.ticket {
+  max-width: 100%;
+  font-size: clamp(76px, 22vw, 155px);
+  line-height: 1;
+  font-weight: 400;
+  margin: 18px 0 20px;
+  letter-spacing: 2px;
+}
+
+.ticket-page {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+}
+
+.ticket-page .label {
+  width: 100%;
+  margin-top: 0;
+}
+
+.ticket-page .queue-label {
+  font-size: clamp(30px, 7vw, 52px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.ticket-page .ticket {
+  width: 100%;
+  margin: clamp(12px, 3vh, 20px) 0 clamp(10px, 2vh, 16px);
+  font-size: clamp(80px, 20vw, 150px);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.ticket-page .date {
+  margin-bottom: clamp(14px, 3vh, 22px);
+  font-size: clamp(10px, 2vw, 12px);
+}
+
+.ticket-page .btn {
+  width: min(100%, 190px);
+  padding: 9px 14px;
+  font-size: clamp(11px, 2vw, 13px);
+}
+
+.date {
+  font-size: 12px;
+  margin-bottom: 18px;
+}
+
+.reset-page .ticket {
+  margin-top: 22px;
+}
+
+.reset-page {
+  justify-content: center;
+}
+
+.reset-page > .btn.small {
+  width: min(88vw, 320px);
+  padding: 18px 24px;
+  font-size: 18px;
+  transform: translateY(clamp(-80px, -10vh, -44px));
+}
+
+.reset-page .label {
+  margin-top: 0;
+  font-size: clamp(14px, 3vw, 17px);
+  font-weight: 500;
+}
+
+.reset-page .ticket {
+  margin: 14px 0 clamp(36px, 8vh, 56px);
+  font-size: clamp(72px, 18vw, 110px);
+  font-weight: 400;
+}
+
+.reset-page .bottom {
+  width: min(88vw, 320px);
+  padding: 18px 24px;
+  font-size: 18px;
+  margin-top: 0;
+  transform: translateY(clamp(44px, 10vh, 80px));
+}
+
+.error {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  background: #b42318;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  z-index: 10;
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding-top: 24px;
+  }
+
+  .topbar {
+    min-height: 34px;
+    padding-block: 7px;
+    font-size: 12px;
+  }
+
+  .page h1 {
+    border-radius: 14px;
+  }
+
+  .btn.big {
+    font-size: 22px;
+  }
+}
